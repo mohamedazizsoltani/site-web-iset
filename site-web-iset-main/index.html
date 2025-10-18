@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>حجز موعد عند الطبيب</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>aziz</h1><input type="button" value="">
-    <input type="text">
-  
-    
+    <header>
+        <h1>مركز الحجز الطبي</h1>
+    </header>
+
+    <main>
+        <section class="doctors">
+            <h2>قائمة الأطباء</h2>
+            <ul id="doctor-list">
+                <li>د. أحمد - طبيب عام</li>
+                <li>د. ليلى - طبيبة أسنان</li>
+                <li>د. سامي - طبيب أطفال</li>
+            </ul>
+        </section>
+
+        <section class="appointment">
+            <h2>حجز موعد</h2>
+            <form id="appointment-form">
+                <label>الاسم الكامل:</label>
+                <input type="text" id="patient-name" required>
+
+                <label>اختر الطبيب:</label>
+                <select id="doctor-select">
+                    <option value="د. أحمد">د. أحمد</option>
+                    <option value="د. ليلى">د. ليلى</option>
+                    <option value="د. سامي">د. سامي</option>
+                </select>
+
+                <label>تاريخ الموعد:</label>
+                <input type="date" id="appointment-date" required>
+
+                <button type="submit">احجز الآن</button>
+            </form>
+        </section>
+
+        <section class="appointments-list">
+            <h2>المواعيد المحجوزة</h2>
+            <ul id="appointments"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
