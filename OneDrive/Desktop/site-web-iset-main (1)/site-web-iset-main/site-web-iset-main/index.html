@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد طبي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>مركز الحجز الطبي</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- قسم الأطباء -->
+        <section class="doctors-section">
+            <h2>الأطباء المتاحون</h2>
+            <ul class="doctor-list">
+                <li>د. أحمد - طبيب عام</li>
+                <li>د. ليلى - طبيبة أسنان</li>
+                <li>د. سامي - طبيب أطفال</li>
+            </ul>
+        </section>
+
+        <!-- قسم حجز موعد -->
+        <section class="booking-section">
+            <h2>احجز موعدك الآن</h2>
+            <form id="appointment-form" class="form">
+                <div class="form-group">
+                    <label for="patient-name">الاسم الكامل:</label>
+                    <input type="text" id="patient-name" name="patient-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor-select">اختر الطبيب:</label>
+                    <select id="doctor-select" name="doctor" required>
+                        <option value="">-- اختر الطبيب --</option>
+                        <option value="د. أحمد">د. أحمد</option>
+                        <option value="د. ليلى">د. ليلى</option>
+                        <option value="د. سامي">د. سامي</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointment-date">تاريخ الموعد:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+
+                <button type="submit" class="submit-btn">احجز الآن</button>
+            </form>
+        </section>
+
+        <!-- قسم عرض المواعيد -->
+        <section class="appointments-section">
+            <h2>المواعيد المحجوزة</h2>
+            <ul id="appointments" class="appointments-list"></ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 مركز الحجز الطبي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
