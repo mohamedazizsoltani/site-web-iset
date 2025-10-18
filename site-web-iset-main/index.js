@@ -1,27 +1,16 @@
-const form = document.getElementById('appointment-form');
-const appointmentsList = document.getElementById('appointments');
+const form = document.getElementById("appointmentForm");
+const list = document.getElementById("appointmentsList");
 
-let appointments = [];
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  const name = document.getElementById("name").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
 
-    const name = document.getElementById('patient-name').value;
-    const doctor = document.getElementById('doctor-select').value;
-    const date = document.getElementById('appointment-date').value;
+  const li = document.createElement("li");
+  li.textContent = `${name} - ${date} à ${time}`;
+  list.appendChild(li);
 
-    const appointment = { name, doctor, date };
-    appointments.push(appointment);
-    renderAppointments();
-
-    form.reset();
+  form.reset();
 });
-
-function renderAppointments() {
-    appointmentsList.innerHTML = '';
-    appointments.forEach((appt, index) => {
-        const li = document.createElement('li');
-        li.textContent = `${appt.name} - ${appt.doctor} - ${appt.date}`;
-        appointmentsList.appendChild(li);
-    });
-}

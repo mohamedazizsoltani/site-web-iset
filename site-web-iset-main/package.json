@@ -1,0 +1,15 @@
+{
+  "name": "site-web-iset",
+  "version": "1.0.0",
+  "description": "Projet des rendez-vous du médecin",
+ "main": "site-web-iset-main/index.html",
+"scripts": {
+  "start": "live-server site-web-iset-main"
+},
+
+  "author": "Ton Nom",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
